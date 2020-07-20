@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
-const routes: Routes = [
+const routes: Routes =[
   {
     path: '',
     redirectTo: 'cliente',
@@ -19,8 +19,8 @@ const routes: Routes = [
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
   }]},
   {
-    path: '**',
-    redirectTo: 'dashboard'
+    path: 'cliente',
+    redirectTo: 'cliente'
   }
 ];
 
@@ -28,7 +28,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes, {
+    RouterModule.forRoot(routes,{
        useHash: true
     })
   ],

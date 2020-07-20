@@ -7,6 +7,13 @@ import { LbdModule } from '../../lbd/lbd.module';
 import { NguiMapModule} from '@ngui/map';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
+
+import { HomeComponent } from '../../home/home.component';
+import { UserComponent } from '../../user/user.component';
+import { TablesComponent } from '../../tables/tables.component';
+import { TypographyComponent } from '../../typography/typography.component';
+import { IconsComponent } from '../../icons/icons.component';
+import { NotificationsComponent } from '../../notifications/notifications.component';
 import {ClienteComponent} from '../../cliente/cliente.component';
 import {GasComponent} from '../../gas/gas.component';
 import {PedidoComponent} from '../../pedido/pedido.component';

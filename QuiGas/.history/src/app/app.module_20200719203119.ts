@@ -12,7 +12,10 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-
+import { SucursalComponent } from './sucursal/sucursal.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import { PedidoComponent } from './pedido/pedido.component';
+import { GasComponent } from './gas/gas.component';
 
 @NgModule({
   imports: [
@@ -27,7 +30,11 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   ],
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    SucursalComponent,
+    ClienteComponent,
+    PedidoComponent,
+    GasComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
