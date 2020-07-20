@@ -8,21 +8,17 @@ import { ServiceService} from '../services/service.service';
   styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit {
-  usuarios: any = [];
+  usuarios: Array<Usuario>;
   usuarioSeleccionado: Usuario;
   usuario: Usuario;
 
   constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
-    this.getUsuarios();
   }
  getUsuarios() {
  this.service.get('/users').subscribe(
-   response => {
-    this.usuarios = response;
-    console.log(this.usuarios);
-   },
+   res => console.log(res),
    err => console.error(err)
  );
  }

@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let usu of usuarios">
+            <tr *ngFor="let usu of usuario">
                 <td>{{usu.id_rol}}</td>
                 <td>{{usu.nombre_usuario}}</td>
                 <td>{{usu.apellido_usuario}}</td>
@@ -25,7 +25,7 @@
                 <td>{{usu.direccion_usuario}}</td>
                 <td>{{usu.correo_usuario}}</td>
                 <td>
-                    <button class="btn btn-warning ml-1 btn-sm text-white" ><i class="fa fa-pencil" aria-hidden="true"></i>
+                    <button class="btn btn-warning ml-1 btn-sm text-white" (click)="agregarTipoEvaluacion(contentEvaluacion,eva)" title="Actualizar" *ngIf="eva.id != tipoevaluacion.id"><i class="fa fa-pencil" aria-hidden="true"></i>
         </button>
                 </td>
             </tr>

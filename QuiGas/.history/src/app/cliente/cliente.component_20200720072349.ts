@@ -8,7 +8,7 @@ import { ServiceService} from '../services/service.service';
   styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit {
-  usuarios: any = [];
+  usuarios: Array<Usuario>;
   usuarioSeleccionado: Usuario;
   usuario: Usuario;
 
@@ -19,10 +19,7 @@ export class ClienteComponent implements OnInit {
   }
  getUsuarios() {
  this.service.get('/users').subscribe(
-   response => {
-    this.usuarios = response;
-    console.log(this.usuarios);
-   },
+   res => console.log(res),
    err => console.error(err)
  );
  }

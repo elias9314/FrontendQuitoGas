@@ -21,7 +21,6 @@ export class ClienteComponent implements OnInit {
  this.service.get('/users').subscribe(
    response => {
     this.usuarios = response;
-    console.log(this.usuarios);
    },
    err => console.error(err)
  );

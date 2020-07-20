@@ -30,7 +30,7 @@ import {HttpClientModule} from '@angular/common/http';
     PedidoComponent,
     SucursalComponent,
   ],
-  providers : [
+  providers :[
     ServiceService
   ]
 })
