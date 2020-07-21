@@ -28,17 +28,18 @@ export class ClienteComponent implements OnInit {
  );
  }
  postUsuario() {
-  this.service.post('/users', {'usuario': this.usuarioSeleccionado}).subscribe(
-    response => {
+   this.service.post('/users', {'usuario': this.usuarioSeleccionado}).subscribe(
+     response => {
       this.getUsuarios();
       console.log(response);
-    },
-    error => {
-      console.log('error');
-    }
-  )
+     },
+     err => {
+       console.log(err);
+     }
+   );
  }
  saveUsuario() {
+  console.log(this.usuarios);
 }
 
 }

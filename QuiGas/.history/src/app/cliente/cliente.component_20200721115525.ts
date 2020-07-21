@@ -17,6 +17,7 @@ export class ClienteComponent implements OnInit {
   ngOnInit(): void {
     this.getUsuarios();
     this.usuarioSeleccionado = new Usuario();
+    this.usuarios = new Array<Usuario>();
   }
  getUsuarios() {
  this.service.get('/users').subscribe(
@@ -28,17 +29,18 @@ export class ClienteComponent implements OnInit {
  );
  }
  postUsuario() {
-  this.service.post('/users', {'usuario': this.usuarioSeleccionado}).subscribe(
-    response => {
+   this.service.post('/users', {'usuario': this.usuarioSeleccionado}).subscribe(
+     response => {
       this.getUsuarios();
       console.log(response);
-    },
-    error => {
-      console.log('error');
-    }
-  )
+     },
+     err => {
+       console.log(err);
+     }
+   );
  }
  saveUsuario() {
+  console.log(this.usuarios);
 }
 
 }
