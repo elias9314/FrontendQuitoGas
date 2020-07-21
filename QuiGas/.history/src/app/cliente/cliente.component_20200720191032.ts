@@ -28,7 +28,7 @@ export class ClienteComponent implements OnInit {
  );
  }
  postUsuario() {
-   this.service.post('/users', {'': this.usuarioSeleccionado}).subscribe(
+   this.service.post('/users', {'usuario': this.usuarioSeleccionado}).subscribe(
      response => {
       this.getUsuarios();
       console.log(response);
@@ -36,17 +36,6 @@ export class ClienteComponent implements OnInit {
      err => {
        console.log(err);
      }
-   );
- }
- saveUsuario() {
-   this.service.postt(this.usuario).subscribe(
-     res => {
-       console.log(res);
-       this.getUsuarios();
-     },
-     err => {
-       console.log(err);
-     }
-   );
+   )
  }
 }

@@ -42,7 +42,6 @@ export class ClienteComponent implements OnInit {
    this.service.postt(this.usuario).subscribe(
      res => {
        console.log(res);
-       this.getUsuarios();
      },
      err => {
        console.log(err);
